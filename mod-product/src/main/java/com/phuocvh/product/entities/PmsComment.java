@@ -12,7 +12,9 @@ import lombok.*;
 @Setter
 @Table(name = "pms_comment")
 public class PmsComment extends BaseEntity {
-  @Id private Integer id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  private Integer id;
 
   private Integer productId;
 

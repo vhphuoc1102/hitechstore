@@ -1,4 +1,4 @@
-package com.phuocvh.product.dtos.product;
+package com.phuocvh.product.dtos;
 
 import java.math.BigDecimal;
 import java.util.Map;

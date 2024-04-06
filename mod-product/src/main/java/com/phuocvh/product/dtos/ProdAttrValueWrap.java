@@ -1,4 +1,4 @@
-package com.phuocvh.product.dtos.product;
+package com.phuocvh.product.dtos;
 
 import lombok.*;
 

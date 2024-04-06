@@ -1,15 +1,15 @@
-package com.phuocvh.product.dtos.product;
+package com.phuocvh.product.payloads.responses.product;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
 import java.time.Instant;
-import lombok.*;
+import java.util.List;
 
-@Getter
-@Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-public class BasicProductWrap {
+@Data
+@EqualsAndHashCode(callSuper = false)
+public class ProductResponse {
   private Integer id;
   private String name;
   private String productSn;
@@ -37,4 +37,10 @@ public class BasicProductWrap {
   private Integer categoryId;
   private Integer brandId;
   private Integer prodAttrGroup;
+
+  private List<Integer> ladderPriceIds;
+  private List<Integer> memberPriceIds;
+  private List<Integer> prodAttrValueIds;
+  private List<Integer> reductionPriceIds;
+  private List<Integer> skuIds;
 }

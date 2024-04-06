@@ -32,6 +32,19 @@ services:
       - "5432:5432"
     networks:
       - keycloak_demo_dev_network
+  postgres:
+    image: postgres:14.2
+    environment:
+      POSTGRES_USER: phuocvh
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
@@ -45,10 +58,14 @@ services:
       - "5050:80"
     networks:
       - keycloak_demo_dev_network
+      - postgres
     restart: unless-stopped
 volumes:
   pgdata_keycloak_demo:
   pgadmin:
+  postgres:
 networks:
   keycloak_demo_dev_network:
+    driver: bridge
+  postgres:
     driver: bridge

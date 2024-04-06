@@ -13,7 +13,9 @@ import lombok.*;
 @Setter
 @Table(name = "pms_prod_reduction")
 public class PmsReductionPrice extends BaseEntity {
-  @Id private Integer id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  private Integer id;
 
   @OneToOne private PmsProduct productId;
 

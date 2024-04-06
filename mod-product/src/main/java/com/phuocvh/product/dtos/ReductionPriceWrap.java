@@ -1,4 +1,4 @@
-package com.phuocvh.product.dtos.product;
+package com.phuocvh.product.dtos;
 
 import java.math.BigDecimal;
 import lombok.*;
@@ -8,10 +8,9 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class LadderPriceWrap {
+public class ReductionPriceWrap {
   private Integer id;
   private Integer productId;
-  private Integer count;
-  private BigDecimal discount;
-  private BigDecimal price;
+  private BigDecimal fullPrice;
+  private BigDecimal reducePrice;
 }

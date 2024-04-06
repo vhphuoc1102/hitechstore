@@ -14,7 +14,9 @@ import org.hibernate.annotations.Comment;
 @Setter
 @Table(name = "pms_product_attribute")
 public class PmsProdAttr extends BaseEntity {
-  @Id private Integer id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  private Integer id;
 
   @Column(columnDefinition = "varchar(64) default ''")
   private String name;

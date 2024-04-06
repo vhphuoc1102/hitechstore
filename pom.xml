@@ -37,7 +37,7 @@
     <spring-boot-dependency.version>3.2.3</spring-boot-dependency.version>
     <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
     <postgresql.version>42.7.2</postgresql.version>
-    <minio.version>8.5.8</minio.version>
+    <minio.version>8.5.9</minio.version>
     <log4j.version>3.0.0-beta2</log4j.version>
     <jackson-databind.version>2.17.0</jackson-databind.version>
     <mapstruct.version>1.6.0.Beta1</mapstruct.version>

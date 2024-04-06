@@ -12,5 +12,7 @@ import lombok.*;
 @Setter
 @Table(name = "pms_freight")
 public class PmsFreight extends BaseEntity {
-  @Id private Integer id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  private Integer id;
 }

@@ -12,7 +12,9 @@ import lombok.*;
 @Setter
 @Table(name = "pms_album")
 public class PmsAlbum extends BaseEntity {
-  @Id private Integer id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  private Integer id;
 
   @Column(columnDefinition = "varchar(64) default ''")
   private String name;

@@ -16,7 +16,9 @@ import org.hibernate.annotations.Comment;
 @Setter
 @Table(name = "pms_sku")
 public class PmsSku extends BaseEntity {
-  @Id private Integer id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  private Integer id;
 
   @Column(columnDefinition = "varchar(64) default ''")
   private String skuName;

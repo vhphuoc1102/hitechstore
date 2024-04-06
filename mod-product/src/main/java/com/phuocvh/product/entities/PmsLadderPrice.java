@@ -13,7 +13,9 @@ import lombok.*;
 @Setter
 @Table(name = "pms_prod_ladder")
 public class PmsLadderPrice extends BaseEntity {
-  @Id private Integer id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  private Integer id;
 
   @OneToOne private PmsProduct productId;
 

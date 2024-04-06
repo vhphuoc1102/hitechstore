@@ -12,7 +12,9 @@ import lombok.*;
 @Setter
 @Table(name = "pms_product_attribute_value")
 public class PmsProdAttrValue extends BaseEntity {
-  @Id private Integer id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  private Integer id;
 
   @Column(columnDefinition = "varchar(64) default ''")
   private String value;
