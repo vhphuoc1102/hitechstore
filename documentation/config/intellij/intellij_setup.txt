@@ -1,0 +1,6 @@
+INTELLIJ SETUP
+
+Search in Settings:
+- On save: reformat code, optimize imports, rearrange code.
+- Advanced: choose allow auto-make.
+- Compiler: build project automatically.
